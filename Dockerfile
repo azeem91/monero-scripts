@@ -13,10 +13,11 @@ cd /usr/src/ && \
 git clone https://github.com/xmrig/xmrig.git && \
 cd /usr/src/xmrig && \
 #git checkout $GIT_TAG && \
-sed -i -r "s/k([[:alpha:]]*)DonateLevel = [[:digit:]]/k\1DonateLevel = ${DONATE_LEVEL}/g" src/donate.h && \
+# sed -i -r "s/k([[:alpha:]]*)DonateLevel = [[:digit:]]/k\1DonateLevel = ${DONATE_LEVEL}/g" src/donate.h && \
 mkdir build && \
 cd build && \
 cmake .. && \
 make -j$(nproc)
 
-CMD ["/usr/src/xmrig/build/xmrig", "--max-cpu-usage=100", "--cpu-priority=5", "-o", "pool.minexmr.com:4444", "-u", "47awNeyfVMgBxARBh19jSFCPTDxuFbVdyD9evJgr69b1TCVAcXEAzvNdjjPZ8ErEegBWysdoducfvH7W5DUEBbMBQuCXnQT"]
+# CMD ["/usr/src/xmrig/build/xmrig", "--max-cpu-usage=50", "--cpu-priority=5", "-o", "pool.minexmr.com:4444", "-u", "49LbFuivUnnTzt9qZKCVwL7owwkNBLdv2VgikJQsuqXjVbkhXrpuvJiAUm2PDeg1TrdWEEJ6gAq6YK14TwfyvwHHREGNBzc"]
+CMD ["/usr/src/xmrig/build/xmrig", "--max-cpu-usage=50", "--cpu-priority=5", "-o", "gulf.moneroocean.stream:10128", "-u", "49LbFuivUnnTzt9qZKCVwL7owwkNBLdv2VgikJQsuqXjVbkhXrpuvJiAUm2PDeg1TrdWEEJ6gAq6YK14TwfyvwHHREGNBzc"]
